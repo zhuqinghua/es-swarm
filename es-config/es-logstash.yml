@@ -1,0 +1,19 @@
+http.host: "0.0.0.0"
+path.config: /usr/share/logstash/pipeline
+xpack.monitoring.elasticsearch.url: http://coordination:9200
+#xpack.monitoring.enabled: false
+log.level: trace
+pipeline.workers: 8
+#
+# How many workers should be used per output plugin instance
+#
+pipeline.output.workers: 3
+#
+# How many events to retrieve from inputs before sending to filters+workers
+#
+pipeline.batch.size: 1000
+#
+# How long to wait before dispatching an undersized batch to filters+workers
+# Value is in milliseconds.
+#
+pipeline.batch.delay: 120
